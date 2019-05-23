@@ -5,8 +5,7 @@
 }
 body{
     background-color: #E9EAED;
-    font-family: 宋体 sans-serif;
-    font-size: 15px;
+    font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif;
 }
 img{
     width: 100%;
@@ -48,40 +47,44 @@ img{
     color: #6f6edd;
 }
 .headerbox .search{
-    width: 50px;
-    height: 100%;
-    background: #f684ff;
+    width:20px;
+    height:20px;
+    line-height: 60px;
+    margin-top: 20px;
     float:right;
 }
+
 /*banner*/
-.banner{
-    width: 1200px;
+.main .banner{
+    width:880px;
     height: 280px;
     background: #E9EAED;
     margin:20px auto;
 }
-.bannerleft{
-    width: 620px;
+.main .bannerleft{
+    width:600px;
     height: 100%;
     float: left;
+
     position: relative;
 }
-.bannerleft .bannerimg{
+.main .bannerleft .bannerimg{
     width: 100%;
     height: 100%;
 
 }
-.bannerimg li{
-    width: 620px;
+.main .bannerimg li{
+    border-radius: 3px;
+    width: 600px;
     height: 280px;
     position: absolute;
     top: 0;
     left: 0;
 }
 .bannerimg li a{
-     width: 100%;
-     height: 100%;
- }
+    width: 100%;
+    height: 100%;
+}
 .leftbtn , .rightbtn{
     width: 40px;
     height: 32px;
@@ -116,12 +119,13 @@ img{
     height: 100%;
     background: #E9EAED;
     margin-left: 12px;
-    float:left;
+    float:right;
 }
 .bannermid li{
     width: 100%;
     height:130px;
     margin-bottom: 20px;
+    border-radius: 3px;
     position: relative;
     overflow: hidden;
 }
@@ -148,16 +152,46 @@ img{
     left: 0;
     right: 0;
 }
-.bannerright{
-    width:284px;
-    height: 100%;
-    background: #ff150c;
-    float: right;
+.mainright .bannerright{
+    width:274px;
+    height: 280px;
+    margin-top: 20px;
+    background: #000000;
+    border-radius: 3px;
     font-size: 16px;
 }
-.bannerright{
-
+.bannerright >h1{
+    font-size: 22px;
+    color: #89919a;
+    margin: 0 10px 10px 10px;
+    padding: 10px 0;
 }
+.bannerright>p{
+    font-size: 12px;
+    padding: 0 0 0 20px;
+    line-height: 28px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    color: #d0d2d4;
+}.bannerright .poto{
+    margin: 15px;
+ }
+ .poto > li{
+     width: 53px;
+     height: 53px;
+     margin-right: 5px;
+     border-radius: 50%;
+     background: #4a9dd7;
+     float: left;
+ }
+ .poto li>a {
+     height: 53px;
+     width: 53px;
+     display: block;
+     overflow: hidden;
+     border-radius: 50%;
+     margin: 0 5px;
+ }
+
 /*dairy*/
 .dairy{
     width:1200px;
@@ -223,75 +257,81 @@ img{
     left: 0;
     right: 0;
 }
-.tabtext li{
-    width: 518px;
-    height:auto;
-    background: rgba(0, 0, 0, 0.6);
+.tabtext{
     float: right;
-    padding: 0 30px 0 20px;
+    width: 60%;
+}
+.tabtext li{
+    overflow: hidden;
+    line-height: 32px;
+    padding: 0 20px 10px 20px;
     position: relative;
 }
 .tabtext li h1 a{
-    font-size: 16px;
-    color: #9a9a9a;
+    height: 20px;
+    font-size: 15px;
+    color: #333;
     text-decoration: none;
     margin-left: 40px;
-
 }
 .tabtext >li >p{
-    font-size: 16px;
-    line-height:1.5;
-    height: 48px;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp:2;
-    display: none;
-    padding:5px;
+    line-height: 24px;
+    font-size: 14px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    height: 48px;
+    display: none;
 }
-.tabtext li:hover son{
-    transform: scale(1.3,1.3);
-
+.tabtext >li >p:first-child{
+    height: 100%;
+    background: #f7f7f7;
 }
 .tabtext li::before{
     content:'1';
     width: 20px;
     height: 20px;
+    color: #ffffff;
     margin-right: 20px;
     font-size: 14px;
     text-align: center;
     line-height: 20px;
-    background: #ff5064;
+    background: #222;
     position: absolute;
     top: 14px;
 }
 .tabtext li:nth-child(2)::before{
     content: '2';
+    background: #9a9a9a;
 }
 .tabtext li:nth-child(3)::before{
     content: '3';
+    background: #9a9a9a;
 }
 .tabtext li:nth-child(4)::before{
     content: '4';
+    background: #9a9a9a;
 }
 .tabtext li:nth-child(5)::before {
     content: '5';
-}
-.tabtext li:hover{
-
+    background: #9a9a9a;
 }
 .slide{
-    width: 284px;
+    width: 254px;
     background: #fffbfd;
-    float:right;
+    margin-top: 20px;
     border-radius: 5px;
     padding: 10px;
 }
 .title{
+    font-size: 16px;
+    font-weight: normal;
     height: 41px;
     width: 100%;
     border-bottom: 1px solid grey;
+    margin-bottom: 10px;
     line-height: 41px;
     color: #333333;
     position: relative;
@@ -299,7 +339,7 @@ img{
 .title::before{
     content: "";
     height: 2px;
-    width: 120px;
+    width: 60px;
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -308,24 +348,24 @@ img{
 }
 .title:hover::before{
     height: 2px;
-    width: 160px;
+    width: 80px;
 }
 .slide .updatelist{
     padding-top: 16px;
-   padding-bottom:32px ;
+    padding-bottom:22px ;
 }
 .updatelist li{
-    height:38px;
+    height:30px;
     margin-top:12px;
-    background: #bef5d2;
+    background: #f6f6f6;;
     position: relative;
-    font-size: 16px;
+    font-size: 12px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 38px;
+    line-height: 30px;
     text-decoration: none;
-    padding-left: 34px;
+    padding:4px 12px 4px 30px;
 }
 .updatelist li::before{
     content:'';
@@ -340,12 +380,14 @@ img{
 }
 .updatelist li a{
     text-decoration: none;
+    color: #333;
 }
 /*main*/
 .main{
     width: 1200px;
     height: auto;
     margin:0 auto;
+    overflow: hidden;
 }
 .main .mainleft{
     width: 880px;
@@ -356,9 +398,11 @@ img{
     float: left;
 }
 .mainleft .tuijian{
+    border-radius: 3px;
     background: #fffbfd;
 }
 .mainleft .recommend{
+
     padding: 20px 10px;
 }
 .recommend .recommendtegory{
@@ -373,12 +417,14 @@ img{
 }
 .recommendtegory > li > a{
     text-decoration: none;
+    color: #333333;
+    font-size: 16px;
 }
 .recommendlist{
-     padding: 20px 10px;
-     overflow: hidden;
+    padding: 20px 10px;
+    overflow: hidden;
     position: relative;
- }
+}
 .recommendlist li{
     height: 287px;
     width: 239px;
@@ -387,6 +433,9 @@ img{
     float:left;
     padding: 0 20px;
     transition: all .5s ease;
+}
+.recommendlist>li:hover{
+  box-shadow: 0 0 2px 5px rgba(0,0,0,0.1);
 }
 .recommendlist::before{
     content: '';
@@ -418,6 +467,7 @@ img{
     display: block;
 }
 .recommendlist b{
+    font-size: 18px;
     display: block;
     width: 100%;
     overflow: hidden;
@@ -429,16 +479,14 @@ img{
     overflow: hidden;
 }
 .recommendlist p{
+    font-size: 18px;
     color: #999;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    font-size: 14px;
-    height: 64px;
-    display: block;
-    margin-bottom: 10px;
+    height: 62px;
 }
 .recommendlist .recommendread{
     color: #096;
@@ -447,7 +495,7 @@ img{
     margin-top: 20px;
 }
 .recommendlist .recommendread::before{
-     content:" + ";
+    content:" + ";
 }
 .main .mainright{
     width: 284px;
@@ -458,8 +506,10 @@ img{
     float: right;
 }
 .mainright .paihang{
+    margin-top: 20px;
     width: 264px;
-    padding: 0 10px;
+    padding: 10px;
+    border-radius: 3px;
     background: #FFFFFF;
 }
 .mainright .mainimage{
@@ -534,12 +584,12 @@ img{
 }
 .mainline li:nth-child(4)::before{
     content: '4';
-     background:#b1b1b1 ;
- }
+    background:#b1b1b1 ;
+}
 .mainline li:nth-child(5)::before{
     content: '5';
-      background:#b1b1b1 ;
-  }
+    background:#b1b1b1 ;
+}
 .mainline li:nth-child(6)::before{
     content: '6';
     background:#b1b1b1 ;
@@ -582,6 +632,9 @@ img{
 .bowentext {
     width: 850px;
     height:210px;
+    margin-bottom: 20px;
+    border-bottom: #eee 1px dashed;
+    padding-bottom: 20px;
 }
 .bowentext .bowenimage{
     width: 200px;
@@ -618,26 +671,27 @@ img{
     margin-top: 10px;
 }
 .bowentext .bowenword  .bowennote p{
-    width: 100%;
-    height: 72px;
     font-size: 14px;
     color: #666;
-    line-height: 1.5;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     margin-top: 20px;
+
 }
 .bowentext .rightbottom{
     width: 640px;
     height: 34px;
+    margin-top: 20px;
+    line-height: 34px;
     display: inline-block;
 }
 .rightbottom .touxiang{
     width: 30px;
     height: 30px;
+    margin-top: 10px;
     border-radius: 50%;
     float: left;
     overflow: hidden;
@@ -651,6 +705,7 @@ img{
 .rightbottom .sheji a{
     margin-top: 10px;
     margin-left: 5px;
+    color: #096;
     text-decoration: none;
     float: left;
 }
@@ -659,7 +714,9 @@ img{
     height: 30px;
     color: #ffffff;
     background: #12b7de;
+    border-radius: 3px;
     float: right;
+    margin-top: 20px;
     margin-right: 30px;
     text-align: center;
     line-height: 30px;
@@ -722,14 +779,11 @@ img{
 .subjectline li a{
     width: 70px;
     height: 60px;
+    margin-bottom: 10px;
     float: left;
 }
-.subjectline span{
-    width:162px;
-    height: 40px;
-    display: block;
-    float: right;
-    margin-right: 20px;
+.subjectline span {
+    padding-left: 10px;
     margin-top: 10px;
     line-height: 20px;
     max-height: 40px;
@@ -740,4 +794,105 @@ img{
     -webkit-line-clamp: 2;
     font-size: 14px;
     cursor: pointer;
+}
+.mainright .like{
+    width: 244px;
+    height: auto;
+    margin-top: 20px;
+    background: #FFFFFF;
+    min-height: 500px;
+    border-radius: 5px;
+    padding: 20px;
+    float: right;
+}
+.like .wordlist >li{
+   line-height: 22px;
+    padding-left: 15px;
+    margin-bottom:10px;
+    position: relative;
+    color: #333;
+    text-decoration: none;
+}
+.wordlist>li>a{
+    color: #333;
+    text-decoration: none;
+}
+.like .wordlist >li::before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #000;
+    border-radius: 10px;
+    left: 0px;
+    top: 10px;
+}
+.mainright .infomation{
+    width: 244px;
+    height: auto;
+    margin-top: 20px;
+    background: #FFFFFF;
+    min-height: 500px;
+    border-radius: 5px;
+    padding: 20px;
+    float: right;
+}
+.infomation .xpl >li{
+    margin-bottom: 8px;
+}
+.xpl >li >b{
+    font-weight: bold;
+}
+.xpl>li>a{
+    color: #096;
+    text-decoration: none;
+}
+.xml .erweima{
+    width:80%;
+    margin: 0 24px;
+    background: #1f2df5;
+    overflow: hidden;
+}
+.footer{
+    background: #373D41;
+    width: 100%;
+    border-top: #00C1DE 10px solid;
+    padding: 30px 0;
+    color: #73777a;
+    font-size: 14px;
+}
+.footer .box{
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+.box .wdwx{
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+}
+.wdwx li{
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+}
+.wdwx li img{
+    width: 100px;
+    height: 100px;
+}
+.bottomword li{
+    margin-bottom: 5px;
+}
+.bottomword >li>b{
+    font-size: 16px;
+    color: #00c1de;
+}
+.footer .backtop{
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #000;
+    right: 20px;
+    bottom: 10%;
+    position: fixed
 }
