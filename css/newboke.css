@@ -180,7 +180,7 @@ img{
      height: 53px;
      margin-right: 5px;
      border-radius: 50%;
-     background: #4a9dd7;
+
      float: left;
  }
  .poto li>a {
@@ -189,10 +189,28 @@ img{
      display: block;
      overflow: hidden;
      border-radius: 50%;
-     margin: 0 5px;
+     text-decoration: none;
  }
-
-/*dairy*/
+.poto li>a> .iconfont{
+    font-size: 28px;
+    display: block;
+    line-height: 53px;
+    text-align: center;
+    overflow: hidden;
+}
+.icon-home{
+    color: #ff8319;
+}
+.icon-youxiang{
+    color: #ffba1c;
+}
+.icon-qq{
+    color: #252BD9;
+}
+.icon-wei_xin{
+    color: #47D93E;
+}
+    /*dairy*/
 .dairy{
     width:1200px;
     height: 310px;

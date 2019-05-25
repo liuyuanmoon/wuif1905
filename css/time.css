@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background-color: #E9EAED;
+    font: 16px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/*header*/
+.header{
+    width: 100%;
+    height:60px;
+    background: black;
+}
+.headerbox{
+    width: 1200px;
+    height:100%;
+    line-height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headerbox h1{
+    height: 100%;
+    float:left;
+    margin-right: 75px;
+    color: #fffbfd;
+}
+.headerbox .nav{
+    height:100%;
+    float:left;
+}
+.nav li{
+    float: left;
+    margin-right: 35px;
+}
+.nav a{
+    color: #fffbfd;
+    text-decoration: none;
+}
+.nav li a:hover{
+    color: #6f6edd;
+}
+.headerbox .search{
+    width:20px;
+    height:20px;
+    line-height: 60px;
+    margin-top: 20px;
+    float:right;
+}
+.title{
+    font-size: 16px;
+    font-weight: normal;
+    height: 41px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+    line-height: 41px;
+    color: #333333;
+    position: relative;
+}
+.title::before{
+    content: "";
+    height: 2px;
+    width: 60px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background: #000;
+    transition: all .15s ease-in;
+}
+.title:hover::before{
+    height: 2px;
+    width: 80px;
+}
+.timebox{
+    background: url("../image/abbg.png") no-repeat right top #fff;
+    width: 1200px;
+    height: auto;
+    margin: 20px auto;
+    padding: 30px;
+}
+.timebox .list{
+    line-height: 1.5;
+}
+.timebox ul {
+    overflow: hidden;
+}
+.timebox span {
+    position: relative;
+    line-height: 32px;
+    padding-right: 40px;
+    color: #999
+}
+.timebox span:after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 40px;
+    background: #e0dfdf;
+    right: 18px
+}
+.timebox li {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.timebox li i {
+    position: relative;
+    font-style: normal
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+.timebox li i:before {
+    content: " ";
+    height: 10px;
+    width: 10px;
+    border: 2px solid #cccaca;
+    background: #fff;
+    position: absolute;
+    top: 4px;
+    left: -26px;
+    border-radius: 50%;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.timebox li:hover i:before {
+    background: #080808
+}
+.listbottom{
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+}
+.listbottom a{
+    color: #666;
+    margin: 0 5px 10px;
+    padding: 5px 10px;
+    background: #F7F7F7;
+    display: inline-block;
+}
+.footer{
+    background: #373D41;
+    width: 100%;
+    border-top: #00C1DE 10px solid;
+    padding: 30px 0;
+    color: #73777a;
+    font-size: 14px;
+}
+.footer .box{
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+.box .wdwx{
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+}
+.wdwx li{
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+}
+.wdwx li img{
+    width: 100px;
+    height: 100px;
+}
+.bottomword li{
+    margin-bottom: 5px;
+}
+.bottomword >li>b{
+    font-size: 16px;
+    color: #00c1de;
+}
+.footer .backtop{
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #000;
+    right: 20px;
+    bottom: 10%;
+    position: fixed
+}
