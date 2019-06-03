@@ -65,7 +65,7 @@ img{
     width:600px;
     height: 100%;
     float: left;
-
+    overflow: hidden;
     position: relative;
 }
 .main .bannerleft .bannerimg{
@@ -77,9 +77,13 @@ img{
     border-radius: 3px;
     width: 600px;
     height: 280px;
+
     position: absolute;
     top: 0;
-    left: 0;
+    left: 600px;
+}
+.bannerimg>li:first-child{
+    left:0;
 }
 .bannerimg li a{
     width: 100%;
@@ -91,7 +95,11 @@ img{
 
     position: absolute;
     top: 114px;
+    z-index: 999;
 }
+/*.rightbtn a{*/
+/*    display: block;*/
+/*}*/
 .leftbtn{
     left: 50px;
 }
@@ -105,6 +113,7 @@ img{
     bottom: 36px;
     left: 50%;
     margin-left: -48px;
+    z-index: 999;
 }
 .btnlist > li{
     width: 10px;
@@ -113,6 +122,10 @@ img{
     float: left;
     border-radius: 50%;
     background: #ffffff;
+    transition: 1.3s;
+}
+.btnlist>li.hot{
+    background:#046b80;
 }
 .bannermid{
     width:268px;
@@ -246,7 +259,7 @@ img{
 }
 .dairyleft .dairytab .tabimage li{
     width: 275px;
-    height: 100px;
+    height: 110px;
     background: #000;
     margin-bottom: 10px;
     position:relative;
@@ -275,39 +288,47 @@ img{
     left: 0;
     right: 0;
 }
-.tabtext{
+.tablist{
     float: right;
     width: 60%;
 }
-.tabtext li{
+.tablist li{
     overflow: hidden;
-    line-height: 32px;
     padding: 0 20px 10px 20px;
+    margin-top: 8px;
     position: relative;
+    background: #f7f7f7;
 }
-.tabtext li h1 a{
+
+.tablist li  a{
     height: 20px;
     font-size: 15px;
+    font-weight: bold;
     color: #333;
     text-decoration: none;
     margin-left: 40px;
 }
-.tabtext >li >p{
+.tablist >li >p{
     line-height: 24px;
     font-size: 14px;
-    overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    height: 48px;
+    height: 44px;
+   overflow: hidden;
+}
+.tablist >li >p{
     display: none;
 }
-.tabtext >li >p:first-child{
-    height: 100%;
-    background: #f7f7f7;
+.tablist>li.hot p{
+    display: block;
 }
-.tabtext li::before{
+.tablist >li >p:first-child{
+    height: 100%;
+
+}
+.tablist li::before{
     content:'1';
     width: 20px;
     height: 20px;
@@ -318,21 +339,21 @@ img{
     line-height: 20px;
     background: #222;
     position: absolute;
-    top: 14px;
+    top: 0;
 }
-.tabtext li:nth-child(2)::before{
+.tablist li:nth-child(2)::before{
     content: '2';
     background: #9a9a9a;
 }
-.tabtext li:nth-child(3)::before{
+.tablist li:nth-child(3)::before{
     content: '3';
     background: #9a9a9a;
 }
-.tabtext li:nth-child(4)::before{
+.tablist li:nth-child(4)::before{
     content: '4';
     background: #9a9a9a;
 }
-.tabtext li:nth-child(5)::before {
+.tablist li:nth-child(5)::before {
     content: '5';
     background: #9a9a9a;
 }
@@ -420,7 +441,6 @@ img{
     background: #fffbfd;
 }
 .mainleft .recommend{
-
     padding: 20px 10px;
 }
 .recommend .recommendtegory{
