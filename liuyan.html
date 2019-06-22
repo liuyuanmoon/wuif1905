@@ -26,25 +26,54 @@
         </div>
     </div>
 </div>
-<div class="main">
-        <div class="liuyan">
-            <h1 class="title">
-                留言板
-            </h1>
-            <b>来说点什么吧...</b>
-            <p>您的姓名:<input type="text">*</p>
-            <p>选择头像：*</p>
-            <ul class="photo">
-                <li><a href=""><img src="./image/tx1.jpg" alt=""></a></li>
-                <li><a href=""><img src="./image/tx2.jpg" alt=""></a></li>
-                <li><a href=""><img src="./image/tx3.jpg" alt=""></a></li>
-                <li><a href=""><img src="./image/tx4.jpg" alt=""></a></li>
-                <li><a href=""><img src="./image/tx5.jpg" alt=""></a></li>
-                <li><a href=""><img src="./image/tx6.jpg" alt=""></a></li>
-                <li><a href=""><img src="./image/tx7.jpg" alt=""></a></li>
-                <li><a href=""><img src="./image/tx8.jpg" alt=""></a></li>
-            </ul>
+<div class="body_content">
+    <div class = "abm">
+        <div  class="slide">
+            <p>留言</p>
+            <span style="width: 1160px;" class ="bottomLine"></span>
+            <div style="clear: both;"></div>
         </div>
+
+        <div class = "message_content">
+            <h2>来说点什么吧...</h2>
+            <form action="">
+                您的姓名：<input class = "want_to_say" name = "name" type="text">*<br>
+                选择头像：*
+                <div class ="tx_tab">
+                    <img src="./image/tx1.jpg" alt="1024">
+                    <img src="./image/tx2.jpg" alt="1024">
+                    <img src="./image/tx3.jpg" alt="1024">
+                    <img src="./image/tx4.jpg" alt="1024">
+                    <img src="./image/tx5.jpg" alt="1024">
+                    <img src="./image/tx6.jpg" alt="1024">
+                    <img src="./image/tx7.jpg" alt="1024">
+                    <img src="./image/tx8.jpg" alt="1024">
+                </div>
+                留言内容：<span  style="opacity: 0.7;">已写<span  style="opacity: 0.7;" id = "written">0</span>字，还可以再写 <span id = "left_to_write" style="opacity: 0.7;">150</span>字</span>
+                <br>
+                <textarea name="" id="message_textarea" cols="30" rows="10"></textarea>
+                <input class = "submit_button" type="submit" value = "提交">
+            </form>
+
+            <div class ="comment">
+                <div class ="comment_tab">
+                    <img src="./image/tx2.jpg" alt="1024">
+
+                    <p class = "date">2019-05-14</p>
+
+                    <span>聂风</span>
+
+                    <p class = "comment_content">站长你真帅！</p>
+                    <div class ="reply_tab">
+                        <p>站长回复：</p>
+                        <p>多谢这位小同志！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
+
 </body>
 </html>

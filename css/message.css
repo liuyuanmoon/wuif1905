@@ -1,0 +1,75 @@
+.abm{
+    height: auto;
+}
+.message_content{
+    width: 1160px;
+    height: auto;
+
+}
+
+.want_to_say{
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
+.tx_tab{
+    padding: 10px;
+}
+.tx_tab img{
+    opacity: 0.5;
+}
+#message_textarea{
+    width: 100%;
+    height: 200px;
+    margin: 10px;
+    outline: none;
+}
+.submit_button{
+    float: right;
+    width: 80px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    background: #1C2327;
+    color: #FFFFFF;
+}
+.comment_tab{
+    margin-top: 60px;
+    width: 1160px;
+    height: 200px;
+    position: relative;
+}
+.comment_tab .date{
+    float: right;
+
+}
+.comment_tab img, span p{
+    float: left;
+}
+.comment_tab span {
+    margin-left: 20px;
+}
+.comment_content{
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.reply_tab{
+    float: left;
+    width: 1160px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+}
+.reply_tab p{
+    width: 1120px;
+    height: 20px;
+    padding:10px;
+    background: #f9f9f9;
+    display: inline-block;
+}
+.reply_tab p:first-child {
+    color: #C40000;
+}
