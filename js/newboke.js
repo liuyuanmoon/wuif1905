@@ -6,7 +6,7 @@ window.onload=function() {
         home.style.color = 'red';
     };
     home.onmouseleave = function () {
-        home.style.color = '#fff';
+        home.style.color = '#ffffff';
     };
 
 
@@ -24,7 +24,7 @@ window.onload=function() {
     // console.log(tabtexts);
     tabtexts.forEach(function (elem, index) {
         // console.log(elem);
-        elem.onmouseenter = function () {
+        elem.onmouseenter = function(){
             for (let i = 0; i < tabtexts.length; i++) {
                 tabtexts[i].classList.remove('hot');
             }
@@ -35,7 +35,8 @@ window.onload=function() {
 
     //轮播图
     let current = 0;
-    next = 0;
+    let next = 0;
+    let flag = true;
     let rb = document.querySelector('.rightbtn');
     let lb = document.querySelector('.leftbtn');
     let bannermig = document.querySelectorAll('.bannerimg>li');
@@ -43,27 +44,43 @@ window.onload=function() {
     let w = bannermig[0].offsetWidth;
     console.log(w);
     lb.onclick = function () {
+        if(!flag){
+            return;
+        }
+        flag = false;
         next--;
         if (next < 0) {
             next = bannermig.length - 1;
         }
         bannermig[next].style.left = w + 'px';
         animate(bannermig[current], {left: -w});
-        animate(bannermig[next], {left: 0});
+        animate(bannermig[next], {left: 0},function(){
+            flag = true;
+        });
+
         bannerpointer[current].classList.remove('hot');
         bannerpointer[next].classList.add('hot');
+
         current = next;
     };
     rb.onclick = function () {
+        if(!flag){
+            return;
+        }
+        flag = false;
         next++;
         if (next == bannermig.length) {
             next = 0;
         }
         bannermig[next].style.left = -w + 'px';
         animate(bannermig[current], {left: w});
-        animate(bannermig[next], {left: 0});
+        animate(bannermig[next], {left: 0},function () {
+            flag = true;
+        });
+
         bannerpointer[current].classList.remove('hot');
         bannerpointer[next].classList.add('hot');
+
         current = next;
     };
 //dian
@@ -171,4 +188,4 @@ window.onload=function() {
             }
         }
     };
-}
+};

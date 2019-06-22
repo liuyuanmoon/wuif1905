@@ -7,8 +7,48 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1194613_lemaks35bqq.css">
     <script src="./js/animate.js"></script>
     <script src="./js/newboke.js"></script>
+    <script src="../JSDUIXIANG/jquery-3.4.1.js"></script>
+    <style>
+        .nav >li>.slidedown{
+            display: none;
+            width: auto;
+            height: auto;
+        }
+       .slidedown>li{
+            background: black;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            overflow: hidden;
+            text-align: center;
+           padding-right: 16px;
+        }
+    </style>
 </head>
 <body>
+<script>
+    $(function () {
+        let slidebtn = $('li:has(.slidedown)');
+        // let slidedowns=$('.slidedown');
+        // slidebtn.on('mouseenter',function () {
+        //     let index = $(this).index('li:has(.slidedown)');
+        //     $(slidedowns[index]).slideDown();
+        // });
+        // slidebtn.on('mouseleave',function(){
+        //     let index = $(this).index('li:has(.slidedown)');
+        //     $(slidedowns[index]).slideUp();
+        // })
+        // slidebtn.on(`mouseenter`,function () {
+        //     $(this).children('.slidedown').slideDown();
+        // });
+        // slidebtn.on(`mouseleave`,function () {
+        //     $(this).children('.slidedown').slideUp();
+        // })
+        slidebtn.hover(function () {
+            $(this).children(`.slidedown`).slideToggle();
+        })
+    })
+</script>
 <!--header-->
 <div class="header">
     <div class="headerbox">
@@ -16,7 +56,13 @@
         <ul class="nav">
             <li><a href="https://liuyuanmoon.github.io/wuif1905/newboke.html" style="color: #00cede">网页首页</a></li>
             <li><a href="https://liuyuanmoon.github.io/wuif1905/bokedairy.html">个人博客日记</a></li>
-            <li><a href="https://liuyuanmoon.github.io/wuif1905/website.html">网站制作</a></li>
+            <li><a href="https://liuyuanmoon.github.io/wuif1905/website.html">网站制作</a>
+            <ul class="slidedown">
+                <li><a href="">html/css</a></li>
+                <li><a href="">css</a></li>
+                <li><a href="">js</a></li>
+            </ul>
+            </li>
             <li><a href="https://liuyuanmoon.github.io/wuif1905/feel.html">设计心得</a></li>
             <li><a href="https://liuyuanmoon.github.io/wuif1905/time.html">时光轴</a></li>
             <li><a href="">留言板</a></li>
